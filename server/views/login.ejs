@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <%- include('header', {title: title, baseUrl: baseUrl}) %>
+    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.9/ejs.min.js"></script>
+    <script src="/login.js"></script>
+    <script src="/templates.js"></script>
+</head>
+
+<body>
+  <div>
+    <%- include('base', {user: user}) %>
+      <main>
+        <h2>ログインして下さい</h2>
+        <input type="text" id="username" placeholder="メールアドレス">
+        <input type="password" id="password" placeholder="パスワード">
+        <div>
+          <button onclick="submitForm()">ログイン</button>
+        </div>
+        <div id="CLIENT_SIDE_RENDER"></div>
+      </main>
+
+      <%- include('loginmsg', {user: user}) %>
+
+  </div>
+</body>
+
+</html>

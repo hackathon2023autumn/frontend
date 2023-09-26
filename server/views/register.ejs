@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <%- include('header', {title: title, baseUrl: baseUrl}) %>
+    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.9/ejs.min.js"></script>
+    <script src="/register.js"></script>
+    <script src="/templates.js"></script>
+</head>
+
+<body>
+  <div>
+    <%- include('base', {user: user}) %>
+      <main>
+        <h2>登録して下さい</h2>
+        <input type="text" id="username" placeholder="Name">
+        <input type="text" id="email" placeholder="email">
+        <input type="text" id="password1" placeholder="passowrd">
+        <input type="text" id="password2" placeholder="もう一度同じpassword">
+        <div>
+          <button onclick="submitForm()">登録</button>
+        </div>
+        <div id="CLIENT_SIDE_RENDER"></div>
+      </main>
+
+      <%- include('loginmsg', {user: user}) %>
+
+  </div>
+</body>
+
+</html>

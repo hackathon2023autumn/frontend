@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <%- include('header', {title: title, baseUrl: baseUrl}) %>
+</head>
+
+<body>
+  <div>
+    <%- include('base', {user: user}) %>
+      <main>
+        <div>
+          <h2>
+            ログイン or ユーザー登録をして下さい
+          </h2>
+          <form>
+            <button>
+              <a href="/login">ログイン</a>
+            </button>
+            <button>
+              <a href="/register">登録</a>
+            </button>
+          </form>
+        </div>
+      </main>
+
+      <%- include('loginmsg', {user: user}) %>
+
+  </div>
+</body>
+
+</html>
